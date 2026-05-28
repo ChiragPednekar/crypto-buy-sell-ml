@@ -1,0 +1,22 @@
+ticker: BTCUSDT
+interval: 1h
+
+training:
+  start_date: 2020-01-01
+  end_date: 2025-01-01
+  test_size: 0.2
+
+model:
+  type: xgboost
+  n_estimators: 300
+  max_depth: 6
+  learning_rate: 0.05
+
+features:
+  use_regime: true
+  use_volume: true
+  use_volatility: true
+
+thresholds:
+  buy_prob: 0.6
+  sell_prob: 0.6
